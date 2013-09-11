@@ -299,7 +299,7 @@ KISSY.add(function (S, Node, Base, Xtpl, Offline) {
             var self = this;
             self.ng.hide();
         },
-        clear: function() {
+        reset: function() {
             var self = this;
             // self.offline.clear();
             self.offline.removeItem(self.stateId);

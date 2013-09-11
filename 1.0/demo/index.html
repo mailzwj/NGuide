@@ -76,7 +76,7 @@
 
     S.use('gallery/NGuide/1.0/index,gallery/NGuide/1.0/index.css', function (S, NGuide) {
         S.one(".NG-reset").on("click", function(){
-            ng.clear();
+            ng.reset();
             window.location.reload();
         });
          var ng = new NGuide({
