@@ -53,7 +53,7 @@ KISSY.add(function (S, Node, Base, Xtpl, Offline) {
         self.auto = cfg.auto;
         self.trigger = S.all(cfg.trigger);
         self.steps = cfg.steps || [];
-        self.stateId = "ks-state-step";
+        self.stateId = "ks-state-step-" + self.id;
         self.ng = S.one(".NG-Guide");
         if (!self.ng) {
             self.ng = S.one(S.DOM.create('<div class="NG-Guide"></div>'));
@@ -274,12 +274,20 @@ KISSY.add(function (S, Node, Base, Xtpl, Offline) {
             var self = this;
             //console.log(step,new Xtpl(self.tpl).render({"data": self.steps[step - 1]}));
             var sl = self.steps.length;
+            if (sl < 1) {
+                S.log("引导步骤小于一。");
+                return false;
+            }
             var acs = NGuide.TEMPLATE.prev + NGuide.TEMPLATE.next + NGuide.TEMPLATE.skip;
             var renderData = {"data": self.steps[step - 1]};
             if (step === 1) {
                 acs = NGuide.TEMPLATE.next + NGuide.TEMPLATE.skip;
             } else if (step === sl) {
                 acs = NGuide.TEMPLATE.prev + NGuide.TEMPLATE.done;
+            }
+            // console.log(step);
+            if (sl === 1) {
+                acs = NGuide.TEMPLATE.done;
             }
             renderData.data.actions = acs;
             renderData.data.step = step;
