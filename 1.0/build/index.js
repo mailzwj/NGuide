@@ -280,8 +280,8 @@ KISSY.add('gallery/NGuide/1.0/index',function (S, Node, Base, Xtpl, Offline) {
             var self = this;
             //console.log(step,new Xtpl(self.tpl).render({"data": self.steps[step - 1]}));
             var sl = self.steps.length;
-            if (sl < 1) {
-                S.log("引导步骤小于一。");
+            if (sl < 1 || step > sl) {
+                S.log("Something is wrong.");
                 return false;
             }
             var acs = NGuide.TEMPLATE.prev + NGuide.TEMPLATE.next + NGuide.TEMPLATE.skip;
