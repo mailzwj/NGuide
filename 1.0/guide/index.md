@@ -2,7 +2,8 @@
 
 * 版本：1.0
 * 教程：[http://gallery.kissyui.com/NGuide/1.0/guide/index.html](http://gallery.kissyui.com/NGuide/1.0/guide/index.html)
-* demo：[http://gallery.kissyui.com/NGuide/1.0/demo/index.html](http://gallery.kissyui.com/NGuide/1.0/demo/index.html)
+* 多步引导demo：[http://gallery.kissyui.com/NGuide/1.0/demo/index.html](http://gallery.kissyui.com/NGuide/1.0/demo/index.html)
+* 单步引导demo：[http://gallery.kissyui.com/NGuide/1.0/demo/single.html](http://gallery.kissyui.com/NGuide/1.0/demo/single.html)
 
 ## 组件说明
 
@@ -17,7 +18,7 @@
 
 ## 参数说明
 
-* @param id{String} 记录引导状态标识，暂无实际意义，默认值ng-index
+* @param id{String} 记录引导状态标识，当多页面共用该组件时作为pageId，因此当出现多页面共用时请确保多页面间id唯一，否则会产生step冲突，默认值ng-index
 * @param arrowSize{Number} 复层指向箭头尺寸，由样式决定，组件默认15
 * @param auto{Boolean} 是否自动初始化引导层，即页面加载完成后直接显示
 * @param trigger{String|HTMLElement} 当auto为false时的，引导组件触发器，点击该节点触发引导功能
@@ -106,6 +107,13 @@ S.use('gallery/NGuide/1.0/index,gallery/NGuide/1.0/index.css', function (S, NGui
 
 ## changelog
 
-### V1.0
+### 2013-09-19 组件升级
+
+- 添加单步引导支持
+- 添加多页面支持
+- 解决多页面localStorage并存冲突的bug
+- 添加@param id的意义
+
+### 2013-09-11 初次提交组件
 
 
