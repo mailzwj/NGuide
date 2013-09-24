@@ -32,7 +32,8 @@ h2 {
 
 .NG-Guide .NG-stepNumber,
 .NG-Guide .NG-Guide-Close {
-	background: url(http://www.seejs.com/wp-content/uploads/2013/09/nguide.png) -999em -999em no-repeat;
+	background: url(http://www.seejs.com/wp-content/uploads/2013/09/nguide-skin.png) -999em -999em no-repeat;
+	_background: url(http://www.seejs.com/wp-content/uploads/2013/09/nguide-skin8.png) -999em -999em no-repeat;
 }
 
 /* 默认 left */
@@ -225,3 +226,166 @@ h2 {
 	background-position: -192px -92px;
 	overflow: hidden;
 }
+
+/* skin's start */
+/* cyan start */
+.NG-Skin-right-cyan,
+.NG-Skin-left-cyan,
+.NG-Skin-top-cyan,
+.NG-Skin-bottom-cyan {
+	border-color: #428bca;
+}
+
+.NG-Skin-right-cyan .NG-stepNumber,
+.NG-Skin-left-cyan .NG-stepNumber,
+.NG-Skin-top-cyan .NG-stepNumber,
+.NG-Skin-bottom-cyan .NG-stepNumber {
+	background-position: 0 -40px;
+}
+
+.NG-Skin-right-cyan .NG-Arrow .border-arrow-down {
+	border-right-color: #428bca;
+}
+
+.NG-Skin-left-cyan .NG-Arrow .border-arrow-down {
+	border-left-color: #428bca;
+}
+
+.NG-Skin-top-cyan .NG-Arrow .border-arrow-down {
+	border-top-color: #428bca;
+}
+
+.NG-Skin-bottom-cyan .NG-Arrow .border-arrow-down {
+	border-bottom-color: #428bca;
+}
+/* cyan end */
+
+/* green start */
+.NG-Skin-right-green,
+.NG-Skin-left-green,
+.NG-Skin-top-green,
+.NG-Skin-bottom-green {
+	border-color: #5cb85c;
+}
+
+.NG-Skin-right-green .NG-stepNumber,
+.NG-Skin-left-green .NG-stepNumber,
+.NG-Skin-top-green .NG-stepNumber,
+.NG-Skin-bottom-green .NG-stepNumber {
+	background-position: 0 -80px;
+}
+
+.NG-Skin-right-green .NG-Arrow .border-arrow-down {
+	border-right-color: #5cb85c;
+}
+
+.NG-Skin-left-green .NG-Arrow .border-arrow-down {
+	border-left-color: #5cb85c;
+}
+
+.NG-Skin-top-green .NG-Arrow .border-arrow-down {
+	border-top-color: #5cb85c;
+}
+
+.NG-Skin-bottom-green .NG-Arrow .border-arrow-down {
+	border-bottom-color: #5cb85c;
+}
+/* green end */
+
+/* blue start */
+.NG-Skin-right-blue,
+.NG-Skin-left-blue,
+.NG-Skin-top-blue,
+.NG-Skin-bottom-blue {
+	border-color: #5bc0de;
+}
+
+.NG-Skin-right-blue .NG-stepNumber,
+.NG-Skin-left-blue .NG-stepNumber,
+.NG-Skin-top-blue .NG-stepNumber,
+.NG-Skin-bottom-blue .NG-stepNumber {
+	background-position: 0 -120px;
+}
+
+.NG-Skin-right-blue .NG-Arrow .border-arrow-down {
+	border-right-color: #5bc0de;
+}
+
+.NG-Skin-left-blue .NG-Arrow .border-arrow-down {
+	border-left-color: #5bc0de;
+}
+
+.NG-Skin-top-blue .NG-Arrow .border-arrow-down {
+	border-top-color: #5bc0de;
+}
+
+.NG-Skin-bottom-blue .NG-Arrow .border-arrow-down {
+	border-bottom-color: #5bc0de;
+}
+/* blue end */
+
+/* orange start */
+.NG-Skin-right-orange,
+.NG-Skin-left-orange,
+.NG-Skin-top-orange,
+.NG-Skin-bottom-orange {
+	border-color: #f0ad4e;
+}
+
+.NG-Skin-right-orange .NG-stepNumber,
+.NG-Skin-left-orange .NG-stepNumber,
+.NG-Skin-top-orange .NG-stepNumber,
+.NG-Skin-bottom-orange .NG-stepNumber {
+	background-position: -40px 0;
+}
+
+.NG-Skin-right-orange .NG-Arrow .border-arrow-down {
+	border-right-color: #f0ad4e;
+}
+
+.NG-Skin-left-orange .NG-Arrow .border-arrow-down {
+	border-left-color: #f0ad4e;
+}
+
+.NG-Skin-top-orange .NG-Arrow .border-arrow-down {
+	border-top-color: #f0ad4e;
+}
+
+.NG-Skin-bottom-orange .NG-Arrow .border-arrow-down {
+	border-bottom-color: #f0ad4e;
+}
+/* orange end */
+
+/* red start */
+.NG-Skin-right-red,
+.NG-Skin-left-red,
+.NG-Skin-top-red,
+.NG-Skin-bottom-red {
+	border-color: #d9534f;
+}
+
+.NG-Skin-right-red .NG-stepNumber,
+.NG-Skin-left-red .NG-stepNumber,
+.NG-Skin-top-red .NG-stepNumber,
+.NG-Skin-bottom-red .NG-stepNumber {
+	background-position: -40px -40px;
+}
+
+.NG-Skin-right-red .NG-Arrow .border-arrow-down {
+	border-right-color: #d9534f;
+}
+
+.NG-Skin-left-red .NG-Arrow .border-arrow-down {
+	border-left-color: #d9534f;
+}
+
+.NG-Skin-top-red .NG-Arrow .border-arrow-down {
+	border-top-color: #d9534f;
+}
+
+.NG-Skin-bottom-red .NG-Arrow .border-arrow-down {
+	border-bottom-color: #d9534f;
+}
+/* red end */
+
+

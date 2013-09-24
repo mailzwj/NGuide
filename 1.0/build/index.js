@@ -55,6 +55,7 @@ KISSY.add('gallery/NGuide/1.0/index',function (S, Node, Base, Xtpl, Offline) {
         self.offline = new Offline();
         self.tpl = NGuide.TEMPLATE.overlay;
         self.id = cfg.id || "ng-index";
+        self.skin = cfg.skin || "default";
         self.arrowSize = cfg.arrowSize || 15;
         self.auto = cfg.auto;
         self.trigger = S.all(cfg.trigger);
@@ -246,6 +247,7 @@ KISSY.add('gallery/NGuide/1.0/index',function (S, Node, Base, Xtpl, Offline) {
                 }
             }
             self.ng.css({"opacity": 0, "top": animProp.top, "left": animProp.left});
+            self.ng.show();
             dest.opacity = 1;
             self._scrollWindow(dest, step, function(){
                 self.ng.animate(dest, 0.5, "easeOut", function(){
@@ -274,7 +276,27 @@ KISSY.add('gallery/NGuide/1.0/index',function (S, Node, Base, Xtpl, Offline) {
                 self._setItem(self.curStep);
             }
             
+            self.setSkin(self.skin);
             self._delegateAction();
+        },
+        setSkin: function(skin) {
+            var self = this;
+            var skinCls = "";
+            var rCls = null;
+            var gdClass = self.ng.attr("class");
+            if (skin) {
+                skinCls += "NG-Skin-" + self.steps[self.curStep - 1].placement + "-" + skin;
+                rCls = new RegExp("(^|\\s+)NG-Skin-(\\w+)-\\w+(\\s+|$)", "g");
+                if (rCls.test(gdClass)) {
+                    gdClass = gdClass.replace(rCls, "$1" + skinCls + "$3");
+                    self.ng.attr("class", gdClass);
+                } else {
+                    self.ng.addClass(skinCls);
+                }
+            } else {
+                self.ng.attr("class", gdClass.replace(new RegExp("(^|\\s+)NG-Skin-(\\w+)-\\w+(\\s+|$)", "g"), ""));
+            }
+            self.skin = skin;
         },
         gotoStep: function(step) {
             var self = this;
@@ -303,7 +325,13 @@ KISSY.add('gallery/NGuide/1.0/index',function (S, Node, Base, Xtpl, Offline) {
             self._setArrowPosition(step);
             var pos = self._getPosition(step);
             //self.ng.css({"display": "block", "top": pos.top, "left": pos.left});
+            var offstate = self.offline.getItem(self.stateId);
             self._moveToTarget(pos, step);
+            if (offstate && offstate.split(":")[1] !== "off") {
+                self._setItem(step);
+                self.curStep = step;
+            }
+            self.setSkin(self.skin);
         },
         destory: function() {
             var self = this;
