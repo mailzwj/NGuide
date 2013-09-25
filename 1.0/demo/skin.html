@@ -7,13 +7,24 @@
 	<style>
 	.span12 {padding-top: 40px;}
 	.NG-Guide .NG-btn {margin-left: 5px;}
+    .NG-Skin-right-custom,
+    .NG-Skin-left-custom,
+    .NG-Skin-top-custom,
+    .NG-Skin-bottom-custom {
+        background: url(http://gtms01.alicdn.com/tps/i1/T1NpmCFnNXXXXdTT.4-105-85.png) 0 100% no-repeat #fff;
+    }
 	</style>
 </head>
 <body>
 	<div class="container">
 		<h1 class="page-header">组件皮肤</h1>
 		<div class="span12">
-			点击下面的按钮，将会为引导层设置相应的皮肤，皮肤取值从左往右依次为cyan, green, blue, orange, red, custom<br>其中最后一个custom在demo中将恢复组件默认样式，同时给引导层添加名为NG-Skin-{placement}-custom的class<br>户可以在自己的css文件中，使用该class作为样式前缀，覆盖引导层内部元素默认样式，达到自定义皮肤的目的<br>组件文档及更多demo请见：<a href="http://gallery.kissyui.com/NGuide/1.0/guide/index.html" target="_blank">KISSY新人引导组件</a>
+			点击下面的按钮，将会为引导层设置相应的皮肤，皮肤取值从左往右依次为cyan, green, blue, orange, red, custom<br>其中最后一个custom在demo中将恢复组件默认样式，同时给引导层添加名为NG-Skin-{placement}-custom的class<br>户可以在自己的css文件中，使用该class作为样式前缀，覆盖引导层内部元素默认样式，达到自定义皮肤的目的<br>
+            比如本例中的custom就为引导层添加了一个背景<br>
+            组件文档及更多demo请见：<a href="http://gallery.kissyui.com/NGuide/1.0/guide/index.html" target="_blank">KISSY新人引导组件</a><br>
+            <p style="color: #f50;">
+                <strong>注：</strong>通过引导层的<strong>上/下</strong>步切换按钮，不会改变皮肤样式，当<strong>点击</strong>各个设置按钮后才会使用新的皮肤样式
+            </p>
 		</div>
 		<div class="span12">
 			<input type="button" class="btn btn-primary" value="BootStrap青">
