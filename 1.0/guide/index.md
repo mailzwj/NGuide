@@ -4,6 +4,7 @@
 * 教程：[http://gallery.kissyui.com/NGuide/1.0/guide/index.html](http://gallery.kissyui.com/NGuide/1.0/guide/index.html)
 * 多步引导demo：[http://gallery.kissyui.com/NGuide/1.0/demo/index.html](http://gallery.kissyui.com/NGuide/1.0/demo/index.html)
 * 单步引导demo：[http://gallery.kissyui.com/NGuide/1.0/demo/single.html](http://gallery.kissyui.com/NGuide/1.0/demo/single.html)
+* 皮肤设置demo：[http://gallery.kissyui.com/NGuide/1.0/demo/skin.html](http://gallery.kissyui.com/NGuide/1.0/demo/skin.html)
 
 ## 组件说明
 
@@ -15,10 +16,13 @@
 
 * `hide`：暂时隐藏引导层，刷新后再次出现。
 * `reset`：当引导功能被销毁后，调用此方法重启。
+* `gotoStep(step)`：切换至第step步引导
+* `setSkin(skin)`：为引导层设置名称为skin的皮肤，skin可取值为`cyan`、`green`、`blue`、`orange`、`red`、`cusstom`
 
 ## 参数说明
 
 * @param id{String} 记录引导状态标识，当多页面共用该组件时作为pageId，因此当出现多页面共用时请确保多页面间id唯一，否则会产生step冲突，默认值ng-index
+* @param skin{String} 指定引导层初始化皮肤，之后可通过setSkin方法改变
 * @param arrowSize{Number} 复层指向箭头尺寸，由样式决定，组件默认15
 * @param auto{Boolean} 是否自动初始化引导层，即页面加载完成后直接显示
 * @param trigger{String|HTMLElement} 当auto为false时的，引导组件触发器，点击该节点触发引导功能
@@ -59,6 +63,7 @@ if (S.Config.debug) {
 S.use('gallery/NGuide/1.0/index,gallery/NGuide/1.0/index.css', function (S, NGuide) {
      var ng = new NGuide({
         id: "ng-index",
+        skin: "red",
         auto: true,
         trigger: ".NG-Start", //auto为false时，点击该节点触发引导
         steps: [
@@ -106,6 +111,13 @@ S.use('gallery/NGuide/1.0/index,gallery/NGuide/1.0/index.css', function (S, NGui
 感谢@阿大 提供[hopscotch](http://linkedin.github.io/hopscotch/)做参考，感谢@伯方 offline组件支持，感谢强大的kissy团队。
 
 ## changelog
+
+### 2013-09-25 组件升级
+
+- 添加皮肤设置功能
+- 新增setSkin方法
+- 添加皮肤设置demo
+- 同步完善文档
 
 ### 2013-09-19 组件升级
 
