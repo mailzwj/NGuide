@@ -5,7 +5,7 @@
 * 多步引导demo：[http://gallery.kissyui.com/NGuide/1.0/demo/index.html](http://gallery.kissyui.com/NGuide/1.0/demo/index.html)
 * 单步引导demo：[http://gallery.kissyui.com/NGuide/1.0/demo/single.html](http://gallery.kissyui.com/NGuide/1.0/demo/single.html)
 * 皮肤设置demo：[http://gallery.kissyui.com/NGuide/1.0/demo/skin.html](http://gallery.kissyui.com/NGuide/1.0/demo/skin.html)
-* 皮肤设置demo：[http://gallery.kissyui.com/NGuide/1.0/demo/event.html](http://gallery.kissyui.com/NGuide/1.0/demo/event.html)
+* 演示stepChange事件：[http://gallery.kissyui.com/NGuide/1.0/demo/event.html](http://gallery.kissyui.com/NGuide/1.0/demo/event.html)
 
 ## 组件说明
 
@@ -123,6 +123,48 @@ S.use('gallery/NGuide/1.0/index,gallery/NGuide/1.0/index.css', function (S, NGui
 })
 ```
 
+## 皮肤自定义
+
+用户自定义样式时只需将下方示例代码中的"green"替换成"custom"，并且添加相关css样式即可
+
+```
+/* green start */
+/* 设置浮层样式（边框/背景） */
+.NG-Skin-right-green,
+.NG-Skin-left-green,
+.NG-Skin-top-green,
+.NG-Skin-bottom-green {
+    /* 你的样式 */
+    border-color: #5cb85c;
+}
+
+/* 设置步骤数字样式 */
+.NG-Skin-right-green .NG-stepNumber,
+.NG-Skin-left-green .NG-stepNumber,
+.NG-Skin-top-green .NG-stepNumber,
+.NG-Skin-bottom-green .NG-stepNumber {
+    background-position: 0 -80px;
+}
+
+/* 设置指向（四个方向）箭头样式 */
+.NG-Skin-right-green .NG-Arrow .border-arrow-down {
+    border-right-color: #5cb85c;
+}
+
+.NG-Skin-left-green .NG-Arrow .border-arrow-down {
+    border-left-color: #5cb85c;
+}
+
+.NG-Skin-top-green .NG-Arrow .border-arrow-down {
+    border-top-color: #5cb85c;
+}
+
+.NG-Skin-bottom-green .NG-Arrow .border-arrow-down {
+    border-bottom-color: #5cb85c;
+}
+/* green end */
+```
+
 ## 致谢
 
 感谢@阿大 提供[hopscotch](http://linkedin.github.io/hopscotch/)做参考，感谢@伯方 offline组件支持，感谢强大的kissy团队。
@@ -133,6 +175,11 @@ S.use('gallery/NGuide/1.0/index,gallery/NGuide/1.0/index.css', function (S, NGui
 
 - 添加stepChange事件，在引导步骤切换完成后触发
 - 新增getStep()方法，用于获取当前引导至第几步
+
+### 2013-09-26 皮肤升级
+
+- 新增皮肤设置说明
+- 新增自定义样式模版代码
 
 ### 2013-09-25 组件升级
 
