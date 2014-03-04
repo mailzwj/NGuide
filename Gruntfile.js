@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-	var task = grunt.task;
+    var task = grunt.task;
     grunt.initConfig({
         // 配置文件，参考package.json配置方式，必须设置项是
         // name, version, author
@@ -13,7 +13,7 @@ module.exports = function(grunt) {
         clean: {
             build: {
                 src: '<%= pkg.version %>/build/*'
-			}
+            }
         },
         // kmc打包任务，默认情况，入口文件是index.js，可以自行添加入口文件，在files下面
         // 添加
@@ -59,25 +59,25 @@ module.exports = function(grunt) {
                 ]
             }
         },
-		// FlexCombo服务配置
-		// https://npmjs.org/package/grunt-flexcombo
-		flexcombo:{
-			// https://speakerdeck.com/lijing00333/grunt-flexcombo
-			debug:{
-				options:{
-					proxyport:8080,
-					target:'<%= pkg.version %>/build/',
-					urls:'/s/kissy/gallery/<%= pkg.name %>/<%= pkg.version %>',
-					port:'80',
-					servlet:'?',
-					separator:',',
-					charset:'gbk', // 输出文件的编码
-					// 默认将"-min"文件映射到源文件
-					filter:{
-						'-min\\.js':'.js'
-					}
-				}
-			},
+        // FlexCombo服务配置
+        // https://npmjs.org/package/grunt-flexcombo
+        flexcombo:{
+            // https://speakerdeck.com/lijing00333/grunt-flexcombo
+            debug:{
+                options:{
+                    proxyport:8080,
+                    target:'<%= pkg.version %>/build/',
+                    urls:'/s/kissy/gallery/<%= pkg.name %>/<%= pkg.version %>',
+                    port:'80',
+                    servlet:'?',
+                    separator:',',
+                    charset:'gbk', // 输出文件的编码
+                    // 默认将"-min"文件映射到源文件
+                    filter:{
+                        '-min\\.js':'.js'
+                    }
+                }
+            },
             demo:{
                 options:{
                     proxyport:8080,
@@ -93,7 +93,7 @@ module.exports = function(grunt) {
                     }
                 }
             }
-		},
+        },
         less: {
             options: {
                 paths: './'
@@ -102,10 +102,10 @@ module.exports = function(grunt) {
                 files: [
                     {
                         expand: true,
-						cwd:'<%= pkg.version %>/',
+                        cwd:'<%= pkg.version %>/',
                         src: ['**/*.less',
-							'!build/**/*.less',   
-							'!demo/**/*.less'],
+                            '!build/**/*.less',   
+                            '!demo/**/*.less'],
                         dest: '<%= pkg.version %>/build/',
                         ext: '.less.css'
                     }
@@ -113,47 +113,47 @@ module.exports = function(grunt) {
             }
         },
         sass: {
-        	dist: {
-        		files: [{
-        			expand: true,
-					cwd:'<%= pkg.version %>/',
-					src: ['**/*.scss',
-						'!build/**/*.scss',   
-						'!demo/**/*.scss'],
-					dest: '<%= pkg.version %>/build/',
-        			ext: '.scss.css'
-        		}]
-        	}
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd:'<%= pkg.version %>/',
+                    src: ['**/*.scss',
+                        '!build/**/*.scss',   
+                        '!demo/**/*.scss'],
+                    dest: '<%= pkg.version %>/build/',
+                    ext: '.scss.css'
+                }]
+            }
         },
-		// 拷贝 CSS 文件
-		copy : {
-			main: {
-				files:[
-					{
-						expand:true,
-						cwd:'<%= pkg.version %>/',
-						src: [
-							'**/*.css',
-							'!build/**/*.css',
-							'!demo/**/*.css'
-						], 
-						dest: '<%= pkg.version %>/build/', 
-						filter: 'isFile'
-					}
-				]
-			}
-		},
-		// 监听JS、CSS、LESS文件的修改
+        // 拷贝 CSS 文件
+        copy : {
+            main: {
+                files:[
+                    {
+                        expand:true,
+                        cwd:'<%= pkg.version %>/',
+                        src: [
+                            '**/*.css',
+                            '!build/**/*.css',
+                            '!demo/**/*.css'
+                        ], 
+                        dest: '<%= pkg.version %>/build/', 
+                        filter: 'isFile'
+                    }
+                ]
+            }
+        },
+        // 监听JS、CSS、LESS文件的修改
         watch: {
             'all': {
                 files: [
-					'<%= pkg.version %>/**/*.js',
-					'<%= pkg.version %>/src/**/*.css',
-					'!<%= pkg.version %>/build/**/*'
-				],
+                    '<%= pkg.version %>/**/*.js',
+                    '<%= pkg.version %>/src/**/*.css',
+                    '!<%= pkg.version %>/build/**/*'
+                ],
                 tasks: [ 'build' ]
             }
-		},
+        },
         cssmin: {
             main: {
                 files: [
@@ -175,28 +175,28 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-flexcombo');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-flexcombo');
     grunt.loadNpmTasks('grunt-contrib-less');
-	grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-sass');
 
-	grunt.registerTask('build', '默认构建任务', function() {
-		task.run(['clean:build', 'kmc','uglify', 'copy','less','sass','cssmin']);
-	});
+    grunt.registerTask('build', '默认构建任务', function() {
+        task.run(['clean:build', 'kmc','uglify', 'copy','less','sass','cssmin']);
+    });
 
-	// 启动Debug调试时的本地服务：grunt debug
-	grunt.registerTask('debug', '开启debug模式', function() {
-		task.run(['flexcombo:debug','watch:all']);
-	});
+    // 启动Debug调试时的本地服务：grunt debug
+    grunt.registerTask('debug', '开启debug模式', function() {
+        task.run(['flexcombo:debug','watch:all']);
+    });
 
-	// 启动Demo调试时的本地服务: grunt demo
-	grunt.registerTask('demo', '开启demo模式', function() {
-		task.run(['flexcombo:demo','watch:all']);
-	});
+    // 启动Demo调试时的本地服务: grunt demo
+    grunt.registerTask('demo', '开启demo模式', function() {
+        task.run(['flexcombo:demo','watch:all']);
+    });
 
     return grunt.registerTask('default', '',function(type){
-		if (!type) {
-			task.run(['build']);
-		}
-	});
+        if (!type) {
+            task.run(['build']);
+        }
+    });
 };

@@ -1,6 +1,6 @@
-## n-guide
+## NGuide
 
-* 版本：1.1
+* 版本：1.0
 * 教程：[http://gallery.kissyui.com/NGuide/1.0/guide/index.html](http://gallery.kissyui.com/NGuide/1.0/guide/index.html)
 * 多步引导demo：[http://gallery.kissyui.com/NGuide/1.0/demo/index.html](http://gallery.kissyui.com/NGuide/1.0/demo/index.html)
 * 单步引导demo：[http://gallery.kissyui.com/NGuide/1.0/demo/single.html](http://gallery.kissyui.com/NGuide/1.0/demo/single.html)
@@ -170,8 +170,6 @@ S.use('gallery/NGuide/1.0/index,gallery/NGuide/1.0/index.css', function (S, NGui
 感谢@阿大 提供[hopscotch](http://linkedin.github.io/hopscotch/)做参考，感谢@伯方 offline组件支持，感谢强大的kissy团队。
 
 ## changelog
-
-### 2014-03-04 v1.1
 
 ### 2013-10-05 添加事件
 

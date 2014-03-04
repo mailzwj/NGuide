@@ -2,16 +2,16 @@
     "name": "n-guide",
     "comName":"NGuide",
     "version": "1.1",
-    "desc": "",
+    "desc": "Newcomer guide plugin",
     "tag":"guide,step",
     "githubName":"mailzwj",
     "author": {
         "name": "郑武江",
         "email": "mailzwj@126.com",
-        "page": ""
+        "page": "http://www.seejs.com"
     },
-	"flexComboPort":"81",
-	"reserveServerPort":"8080",
+    "flexComboPort":"81",
+    "reserveServerPort":"8080",
     "type": "kissy-gallery",
     "type-url": "http://gallery.kissyui.com/guide"
 }
