@@ -1,0 +1,17 @@
+{
+    "name": "n-guide",
+    "comName":"NGuide",
+    "version": "1.1",
+    "desc": "",
+    "tag":"guide,step",
+    "githubName":"mailzwj",
+    "author": {
+        "name": "郑武江",
+        "email": "mailzwj@126.com",
+        "page": ""
+    },
+	"flexComboPort":"81",
+	"reserveServerPort":"8080",
+    "type": "kissy-gallery",
+    "type-url": "http://gallery.kissyui.com/guide"
+}
