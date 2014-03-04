@@ -1,11 +1,11 @@
 ## n-guide
 
 * 版本：1.1
-* 教程：[http://gallery.kissyui.com/NGuide/1.0/guide/index.html](http://gallery.kissyui.com/NGuide/1.0/guide/index.html)
-* 多步引导demo：[http://gallery.kissyui.com/NGuide/1.0/demo/index.html](http://gallery.kissyui.com/NGuide/1.0/demo/index.html)
-* 单步引导demo：[http://gallery.kissyui.com/NGuide/1.0/demo/single.html](http://gallery.kissyui.com/NGuide/1.0/demo/single.html)
-* 皮肤设置demo：[http://gallery.kissyui.com/NGuide/1.0/demo/skin.html](http://gallery.kissyui.com/NGuide/1.0/demo/skin.html)
-* 演示stepChange事件：[http://gallery.kissyui.com/NGuide/1.0/demo/event.html](http://gallery.kissyui.com/NGuide/1.0/demo/event.html)
+* 教程：[http://gallery.kissyui.com/n-guide/1.1/guide/index.html](http://gallery.kissyui.com/n-guide/1.1/guide/index.html)
+* 多步引导demo：[http://gallery.kissyui.com/n-guide/1.1/demo/index.html](http://gallery.kissyui.com/n-guide/1.1/demo/index.html)
+* 单步引导demo：[http://gallery.kissyui.com/n-guide/1.1/demo/single.html](http://gallery.kissyui.com/n-guide/1.1/demo/single.html)
+* 皮肤设置demo：[http://gallery.kissyui.com/n-guide/1.1/demo/skin.html](http://gallery.kissyui.com/n-guide/1.1/demo/skin.html)
+* 演示stepChange事件：[http://gallery.kissyui.com/n-guide/1.1/demo/event.html](http://gallery.kissyui.com/n-guide/1.1/demo/event.html)
 
 ## 组件说明
 
@@ -77,7 +77,7 @@ if (S.Config.debug) {
 组件调用方法：
 
 ```
-S.use('gallery/NGuide/1.0/index,gallery/NGuide/1.0/index.css', function (S, NGuide) {
+S.use('gallery/n-guide/1.1/index,gallery/n-guide/1.1/index.css', function (S, NGuide) {
      var ng = new NGuide({
         id: "ng-index",
         skin: "red",
@@ -171,7 +171,7 @@ S.use('gallery/NGuide/1.0/index,gallery/NGuide/1.0/index.css', function (S, NGui
 
 ## changelog
 
-### 2014-03-04 v1.1
+## 2014-03-04 v1.1
 
 ### 2013-10-05 添加事件
 
