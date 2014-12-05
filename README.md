@@ -1,11 +1,11 @@
 ## n-guide
 
 * 版本：1.1
-* 教程：[http://gallery.kissyui.com/n-guide/1.1/guide/index.html](http://gallery.kissyui.com/n-guide/1.1/guide/index.html)
-* 多步引导demo：[http://gallery.kissyui.com/n-guide/1.1/demo/index.html](http://gallery.kissyui.com/n-guide/1.1/demo/index.html)
-* 单步引导demo：[http://gallery.kissyui.com/n-guide/1.1/demo/single.html](http://gallery.kissyui.com/n-guide/1.1/demo/single.html)
-* 皮肤设置demo：[http://gallery.kissyui.com/n-guide/1.1/demo/skin.html](http://gallery.kissyui.com/n-guide/1.1/demo/skin.html)
-* 演示stepChange事件：[http://gallery.kissyui.com/n-guide/1.1/demo/event.html](http://gallery.kissyui.com/n-guide/1.1/demo/event.html)
+* 教程：[http://mailzwj.github.io/n-guide/](http://mailzwj.github.io/n-guide/)
+* 多步引导demo：[http://mailzwj.github.io/n-guide/1.1/demo/index.html](http://mailzwj.github.io/n-guide/1.1/demo/index.html)
+* 单步引导demo：[http://mailzwj.github.io/n-guide/1.1/demo/single.html](http://mailzwj.github.io/n-guide/1.1/demo/single.html)
+* 皮肤设置demo：[http://mailzwj.github.io/n-guide/1.1/demo/skin.html](http://mailzwj.github.io/n-guide/1.1/demo/skin.html)
+* 演示stepChange事件：[http://mailzwj.github.io/n-guide/1.1/demo/event.html](http://mailzwj.github.io/n-guide/1.1/demo/event.html)
 
 ## 组件说明
 
